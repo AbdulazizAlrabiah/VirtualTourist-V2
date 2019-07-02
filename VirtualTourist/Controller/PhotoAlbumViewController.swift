@@ -137,8 +137,46 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        dataController.viewContext.delete(fetchedResultsController.object(at: indexPath))
-        save()
+        let alertVC = UIAlertController(title: nil, message: "What would you like to do with the image", preferredStyle: .alert)
+
+        alertVC.addAction(UIAlertAction(title: "Create Meme", style: .default, handler: { (alert) in
+            self.changePhotoToMemedImage(indexPath: indexPath)
+        }))
+        
+        alertVC.addAction(UIAlertAction(title: "Share", style: .default, handler: { (alert) in
+            self.shareImage(indexPath: indexPath)
+        }))
+        
+        alertVC.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alert) in
+            self.dataController.viewContext.delete(self.fetchedResultsController.object(at: indexPath))
+            self.save()
+        }))
+        
+        alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        showDetailViewController(alertVC, sender: nil)
+    }
+    
+    func changePhotoToMemedImage(indexPath: IndexPath) {
+        
+        let createMemeVC = self.storyboard!.instantiateViewController(withIdentifier: "CreateMeme") as! CreateMemeVC
+        let image = UIImage(data: self.fetchedResultsController.object(at: indexPath).image!)
+        createMemeVC.image = image
+        createMemeVC.createdMeme = { memedImage in
+            self.fetchedResultsController.object(at: indexPath).image = memedImage.pngData()
+            self.save()
+        }
+        self.present(createMemeVC, animated: true, completion: nil)
+    }
+    
+    func shareImage(indexPath: IndexPath) {
+        
+        let image = self.fetchedResultsController.object(at: indexPath).image
+        let activityView = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityView.completionWithItemsHandler = {(activity, completed, items, error) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        self.present(activityView, animated: true)
     }
 }
 

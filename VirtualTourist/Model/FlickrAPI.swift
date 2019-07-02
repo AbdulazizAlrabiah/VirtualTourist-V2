@@ -71,7 +71,7 @@ class FlickrAPI {
     class func fillURLsArray(photos: [PhotoAlbumArrayResponse]) {
         
         for (index, photo) in photos.enumerated() {
-            arrayOfURLs.append("https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_s.jpg")
+            arrayOfURLs.append("https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg")
         }
     }
     

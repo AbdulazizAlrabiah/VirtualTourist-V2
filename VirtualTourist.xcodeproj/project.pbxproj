@@ -12,6 +12,7 @@
 		8F42B2E822AC539600CE74C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F42B2E622AC539600CE74C1 /* Main.storyboard */; };
 		8F42B2EA22AC539700CE74C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F42B2E922AC539700CE74C1 /* Assets.xcassets */; };
 		8F42B2ED22AC539700CE74C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F42B2EB22AC539700CE74C1 /* LaunchScreen.storyboard */; };
+		8F475DB122CBDDF40006DCDF /* CreateMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F475DB022CBDDF40006DCDF /* CreateMemeViewController.swift */; };
 		8FFFD1FF22B9546200EA40FC /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFD1FE22B9546200EA40FC /* PhotoAlbumViewController.swift */; };
 		8FFFD20122B954D100EA40FC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFD20022B954D100EA40FC /* CollectionViewCell.swift */; };
 		8FFFD20622B9560000EA40FC /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFFD20522B9560000EA40FC /* FlickrAPI.swift */; };
@@ -29,6 +30,7 @@
 		8F42B2E922AC539700CE74C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F42B2EC22AC539700CE74C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F42B2EE22AC539700CE74C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F475DB022CBDDF40006DCDF /* CreateMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemeViewController.swift; sourceTree = "<group>"; };
 		8FFFD1FE22B9546200EA40FC /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		8FFFD20022B954D100EA40FC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8FFFD20522B9560000EA40FC /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				8F42B2E422AC539600CE74C1 /* MapViewController.swift */,
 				8FFFD1FE22B9546200EA40FC /* PhotoAlbumViewController.swift */,
+				8F475DB022CBDDF40006DCDF /* CreateMemeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				8FFFD20F22BD490C00EA40FC /* VirtualTourist.xcdatamodeld in Sources */,
 				8FFFD20622B9560000EA40FC /* FlickrAPI.swift in Sources */,
 				8FFFD20A22BD307100EA40FC /* PhotoAlbumResponse.swift in Sources */,
+				8F475DB122CBDDF40006DCDF /* CreateMemeViewController.swift in Sources */,
 				8FFFD20C22BD311E00EA40FC /* PhotoAlbumArrayResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
